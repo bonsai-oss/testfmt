@@ -18,7 +18,7 @@ You just need to replace the `./test/integration` path with the path to your int
 integration test:
   image: debian:stable-slim
   before_script:
-    - wget https://gitlab.com/bonsai-oss/tools/testfmt/-/jobs/5697209953/artifacts/raw/build/testfmt-darwin-amd64 -O testfmt && chmod +x testfmt
+    - wget https://gitlab.com/bonsai-oss/tools/testfmt/-/jobs/5697209953/artifacts/raw/build/testfmt-linux-amd64 -O testfmt && chmod +x testfmt
   script:
     - ./testfmt -f junit -o test-results.xml -d ./test/integration
   artifacts:
