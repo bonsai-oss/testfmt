@@ -1,0 +1,25 @@
+version: 1
+
+project_name: testfmt
+
+release:
+  draft: false
+  github:
+    owner: bonsai-oss
+    name: testfmt
+  name_template: 'Release {{.Tag}}'
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+      - freebsd
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - format: binary
