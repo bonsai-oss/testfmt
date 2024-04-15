@@ -9,8 +9,8 @@ stages:
 variables:
   SEMVER_PREFIX: v
 include:
-  - { project: bonsai-oss/organization/automate/ci-templates, file: templates/language/go.yml, ref: 1.0.5 }
-  - { project: bonsai-oss/organization/automate/ci-templates, file: templates/release/semver.yml, ref: 1.0.5 }
+  - { project: bonsai-oss/organization/automate/ci-templates, file: templates/language/go.yml, ref: 1.0.6 }
+  - { project: bonsai-oss/organization/automate/ci-templates, file: templates/release/semver.yml, ref: 1.0.6 }
 
 build:
   image: golang:latest
