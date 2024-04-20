@@ -4,6 +4,7 @@ project_name: testfmt
 
 release:
   draft: false
+  prerelease: auto
   github:
     owner: bonsai-oss
     name: testfmt
@@ -23,3 +24,11 @@ builds:
 
 archives:
   - format: binary
+
+nfpms:
+  - id: testfmt
+    maintainer: bonsai-oss
+    homepage: https://github.com/bonsai-oss/testfmt
+    file_name_template: '{{ .ProjectName }}_{{ replace .Version "v" "" }}_{{ .Os }}_{{ .Arch }}'
+    formats:
+      - deb
