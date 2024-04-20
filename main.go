@@ -102,7 +102,11 @@ func main() {
 			globalIsFailed = true
 			color.New(color.Bold, color.FgRed).Println("├─ ", runExecutableError)
 		}
-		log.Print("└─ ", color.New(color.Bold, color.FgHiWhite).Sprintf("Took: %s", time.Since(start)))
+
+		// flush the output
+		prefixStderr.Write(nil)
+
+		log.Print("└─ ", color.New(color.Bold, color.FgHiWhite).Sprintf("Runtime: %s", time.Since(start)))
 		results.Tests = append(results.Tests, result.Test{
 			Name:       path.Base(executable),
 			SourceFile: executable,
