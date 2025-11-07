@@ -1,6 +1,6 @@
 module testfmt
 
-go 1.21
+go 1.25.4
 
 require (
 	github.com/alecthomas/kingpin/v2 v2.4.0
